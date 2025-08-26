@@ -1,8 +1,13 @@
 package tp1;
 public class hola {
+    /**
+     * @param args
+     */
     public static void main (String args [])
     {
-        System.out.println("hola alumndo de PA");
-    }
-    
+        int valor1 = 5;
+        System.out.println("hola alumno de PA");
+        System.out.println("valor incremental:" + valor1++);
+        System.out.println("valor incremental:" + valor1);
+}
 }
