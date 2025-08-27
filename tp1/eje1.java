@@ -17,5 +17,7 @@ public class eje1 {
         System.out.println("El resultado es:" + (resultadoEntero = valor1 * (int) decimal2));
         System.out.println("El resultado es:" + (resultadoEntero = (int) (valor1 * decimal2)));
         System.out.println("El resultado es:" + (resultadoEntero = valor1 * (int) decimal2));
+        System.out.println("El resultado es:" + valor1++);
+        System.out.println("El resultado es:" + (valor2 = valor1++));
     }
 }
