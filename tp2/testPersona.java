@@ -1,6 +1,6 @@
 package tp2;
 
-public class testPersona {
+public class TestPersona {
     public static void main(String[] args) {
 
         Persona persona1, persona2;
