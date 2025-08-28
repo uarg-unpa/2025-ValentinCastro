@@ -1,13 +1,13 @@
 package tp2;
 
-public class persona {
+public class Persona {
 
     String nombre;
     String apellido;
     int edad;
     int dni;
 
-    public persona(String nombre, String apellido, int edad, int dni)
+    public Persona(String nombre, String apellido, int edad, int dni)
     {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -38,7 +38,7 @@ public class persona {
     public void setDni (int dni){
         this.dni = dni;
     }
-    public static boolean mayorDeEdad (){
+    public  boolean mayorDeEdad (){
         if (edad >= 18)
             return true;
         else
