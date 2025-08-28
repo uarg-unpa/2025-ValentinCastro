@@ -2,7 +2,7 @@ package tp2;
 
 public class TestPersona {
     public static void main(String[] args) {
-
+//algo
         Persona persona1, persona2;
 
         persona1 = new Persona("Franco", "Herrera", 42, 1234);
