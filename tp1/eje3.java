@@ -22,6 +22,6 @@ public class eje3 {
             System.out.println("valor de A: " + valorA);
             System.out.println("valor de B: " + valorB);
             System.out.println("valor de C: " + valorC);
-
+            scanner.close();
     }
 }
