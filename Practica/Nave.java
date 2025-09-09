@@ -4,24 +4,29 @@
 
 package Practica;
 
-public class Naves{
+public class Nave{
 
-    String nombre;
-    int velocidadMax;
-    int velocidadActual;
-    int combusRest;
-    String destino;
+    private String nombre;
+    private String destino;
+    private int velocidadMax;
+    private int velocidadActual;
+    private int combusRest;
+    
 
     //Constructor
 
-    public Naves (String nombre, int velocidadMax, int velocidadActual, int combusRest, String destino){
+    public Nave (String nombre, String destino, int velocidadMax, int combusRest){
     this.nombre = nombre;
     this.velocidadMax = velocidadMax;
-    this.velocidadActual = velocidadActual;
     this.combusRest = combusRest;
     this.destino = destino;
     }
 
+    @Override
+    public String toString (){
+        return "Nave ["+this.nombre+"] ["+this.velocidadActual+"]["+this.combusRest+"]["+this.destino+"]";
+    }
+    
     //set y get
 
     public String getNombre (){
@@ -69,7 +74,8 @@ public class Naves{
     public void informe(){
         System.out.println("Informe de la mision");
         System.out.println("Nombre de la nave: " + nombre);
-        System.out.println();
+        System.out.println("Velocidad maxima alcanzada" + velocidadMax);
+        System.out.println("Capacidad de combustible: " + combusRest);
     }
 
     public void acelerar (int incremento){
