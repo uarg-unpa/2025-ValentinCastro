@@ -45,4 +45,8 @@ public class Alumno {
     public void setLegajo(int legajo){
         this.legajo = legajo;
     }
+    @Override
+    public String toString (){
+        return "Alumno ["+this.nombre+"] ["+this.apellido+"] ["+this.dni+"] ["+this.carrera+"] ["+this.legajo+"]";
+    }
 }

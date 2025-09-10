@@ -2,47 +2,48 @@ package tp2;
 
 public class Persona {
 
-    String nombre;
-    String apellido;
-    int edad;
-    int dni;
+    private String nombre;
+    private int edad;
+    private String dni;
+    private char sexo;
+    private double peso;
+    private double altura;
+    private Domicilio domicilio;
 
-    public Persona(String nombre, String apellido, int edad, int dni)
-    {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.dni = dni;
+    public Persona(String nombre) {
+        if (nombre != null && !nombre.trim().isEmpty()) {
+            this.nombre = nombre;
+        }
+        this.domicilio = new Domicilio("", 0);
     }
-    public String getNombre(){
-    return this.nombre;
+
+    public Persona (String nombre, int edad, String dni, char sexo, double peso, double altura, Domicilio domicilio) {
+        if (nombre != null && !nombre.trim().isEmpty()) {
+            this.nombre = nombre;
+        }
+        if (edad >= 0) {
+            this.edad = edad;
+        }
+        if (dni != null && !dni.trim().isEmpty()) {
+            this.dni = dni;
+        }
+        if (comprobarSexo (sexo)) {
+            this.sexo = sexo;
+        }
+        if (peso >= 0) {
+            this.peso = peso;
+        }
+        if (altura >= 0) {
+            this.altura = altura;
+        }
+        this.domicilio = domicilio;
     }
-    public void setNombre(String nombre){
-        this.nombre = nombre;
+
+    public boolean esMayorDeEdad () {
+        return edad >= 18;
     }
-    public String getApellido(){
-    return this.apellido;
-    }
-    public void setApellido(String apellido){
-        this.apellido = apellido;
-    }
-    public int getEdad(){
-    return this.edad;
-    }
-    public void setEdad(int edad){
-        this.edad = edad;
-    }
-    public int getDni(){
-    return this.dni;
-    }
-    public void setDni (int dni){
-        this.dni = dni;
-    }
-    public  boolean mayorDeEdad (){
-        if (edad >= 18)
-            return true;
-        else
-            return false;
+
+    public String toString () {
+        return "Persona [nombre =]"
     }
 }
-

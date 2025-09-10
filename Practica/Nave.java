@@ -1,4 +1,4 @@
-//Una simulacion de espacial registra naves con nombre, velocidad maxima (en km/h), combustible restante (en litros) y destino. Los jugadores quieren verificar si una nave puede llegar a su destino (combustible > 100), acelerar (aumentar velocidad), y mostrar informe de la mision.
+//Una simulacion de espacial registra naves con nombre, velocidad maxima (en km/h), combustible restante (en litros) y destino. Los jugadores quieren verificar si una nave puede llegar a su destino (combustible > 1000), acelerar (aumentar velocidad), y mostrar informe de la mision.
 
 
 
@@ -62,7 +62,7 @@ public class Nave{
 
     // Metodos
     public boolean puedeLlegar(){
-        if (combusRest < 1000){
+        if (combusRest > 1000){
             System.out.println("La nave puede llegar a su destino");
             return true;
         }
