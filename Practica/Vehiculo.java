@@ -4,10 +4,10 @@ public class Vehiculo {
     private String marca;
     private int modelo;
     private Motor motor;
-    private int capacidadLts;
-    private int kilometros;
+    private double capacidadLts;
+    private double kilometros;
 
-    public Vehiculo (String marca, int modelo, Motor motor, int capacidadLts, int kilometros) {
+    public Vehiculo (String marca, int modelo, Motor motor, double capacidadLts, double kilometros) {
         this.marca = marca;
         this.modelo = modelo;
         this.motor = motor;
@@ -32,16 +32,16 @@ public class Vehiculo {
     public void setMotor (Motor motor) {
         this.motor = motor;
     }
-    public int getCapacidadLts (){
+    public double getCapacidadLts (){
         return this.capacidadLts;
     }
-    public void setCapacidadLts (int capacidadLts){
+    public void setCapacidadLts (double capacidadLts){
         this.capacidadLts = capacidadLts;
     }
-    public int kilometros (){
+    public double kilometros (){
         return this.kilometros;
     }
-    public void kilometros (int kilometros){
+    public void kilometros (double kilometros){
         this.kilometros = kilometros;
     }
 
@@ -68,6 +68,6 @@ public class Vehiculo {
     
     @Override
     public String toString (){
-        return "Vehiculo ["+this.marca+"] ["+this.modelo+"] ["+this.motor+"] ["+this.capacidadLts+"] ["+this.capacidadLts+"]";
+        return "Vehiculo ["+this.marca+"] ["+this.modelo+"] ["+this.motor+"] ["+this.kilometros+"] ["+this.capacidadLts+"]";
     }
 }
