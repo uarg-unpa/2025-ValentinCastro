@@ -46,13 +46,16 @@ public class Pelicula {
     }
 
     public boolean mayorDeEdad (){
-        if (edadMinima > 17){
-            System.out.println("Esta pelicula es para mayores de edad");
+        if (getEdadMinima() > 17){
             return true;
         }
         else {
-            System.out.println("Esta peliucla no es apta para menores de edad");
             return false;
         }
     }
+    @Override
+    public String toString (){
+        return "Pelicula ["+this.titulo+"] ["+this.genero+"] ["+this.director+"] ["+this.año+"] ["+this.edadMinima+"]]";
+    }
+
 }

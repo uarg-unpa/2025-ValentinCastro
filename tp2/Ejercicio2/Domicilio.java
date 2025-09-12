@@ -30,4 +30,7 @@ public class Domicilio {
     public void setCodigoPostal(int codigoPostal){
         this.codigoPostal = codigoPostal;
     }
+    public String toString (){
+        return "[Domicilio ["+this.numero+"] ["+this.calle+"] ["+this.localidad+"] ["+this.codigoPostal+"]]";
+    }
 }

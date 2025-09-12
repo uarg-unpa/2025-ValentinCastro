@@ -43,7 +43,19 @@ public class Persona {
         return edad >= 18;
     }
 
+    private boolean comprobarSexo (char sexo) {
+        if (sexo == 'M' && sexo == 'm'){
+            return "Masculino";
+        }
+        else if (sexo == 'F' && sexo == 'f'){
+        return ";
+        }
+        else {
+        return "Letra no valida";
+        }
+    }
+
     public String toString () {
-        return "Persona [nombre =]"
+        return 
     }
 }

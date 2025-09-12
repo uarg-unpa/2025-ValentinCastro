@@ -35,16 +35,16 @@ public class TestVehiculo {
 
         System.out.println("Ingresar la capcidad de combustible: ");
         double capacidadLts = scanner.nextDouble();
-        scanner.nextLine();
 
         System.out.println("Ingresar kilometros");
         double kilometros = scanner.nextDouble();
-        scanner.nextLine();
 
         Motor m2 = new Motor(cilindrada, tipo);
         Vehiculo auto2 = new Vehiculo(marca, modelo, m2, capacidadLts, kilometros);
-        System.out.println(auto2);
-        System.out.println();
+        System.out.println(auto2.toString());
+        System.out.println("Es potente? " + auto2.esPotente());
+        System.out.println("Cuanto consume el auto: " + auto2.calcularConsumo() + "lts");
+
         scanner.close();
     }
 }
