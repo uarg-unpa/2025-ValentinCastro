@@ -46,8 +46,7 @@ public class Vehiculo {
     }
 
     public boolean esPotente(){
-        int hp = 0; //caballos de fuerza
-        if (hp > 500) {
+        if (this.motor.getCilindrada() > 1000) {
             return true;
         }
         else {

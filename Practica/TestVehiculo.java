@@ -14,9 +14,37 @@ public class TestVehiculo {
         System.out.println(auto1.esPotente());
         System.out.println(auto1.toString());
 
-        Motor m2 = new Motor(0, null);
-        Vehiculo auto2 = new Vehiculo(null, 0, m2, 0, 0);
+
         System.out.println("Ingrese los datos del vehiculo");
-        System.out.println("Ingrese vehiculo");
+
+        System.out.println("Ingrese Marca del vehiculo: ");
+        String marca = scanner.nextLine();
+
+        System.out.println("Ingrese Modelo: ");
+        int modelo = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Ingresar datos del motor");
+
+        System.out.println("Ingresar cilindrada: ");
+        int cilindrada = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Ingresar tipo del motor: ");
+        String tipo = scanner.nextLine();
+
+        System.out.println("Ingresar la capcidad de combustible: ");
+        double capacidadLts = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.println("Ingresar kilometros");
+        double kilometros = scanner.nextDouble();
+        scanner.nextLine();
+
+        Motor m2 = new Motor(cilindrada, tipo);
+        Vehiculo auto2 = new Vehiculo(marca, modelo, m2, capacidadLts, kilometros);
+        System.out.println(auto2);
+        System.out.println();
+        scanner.close();
     }
 }
