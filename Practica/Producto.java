@@ -4,12 +4,13 @@ package Practica;
 
 public class Producto {
     private String descripcion;
-    private int precio;
+    private double precio;
     private Proveedor proveedor;
+    private double porcentaje;
 
 
 // constructor
-public Producto (String descripcion, int precio, Proveedor proveedor) {
+public Producto (String descripcion, double precio, Proveedor proveedor) {
     this.descripcion = descripcion;
     this.precio = precio;
     this.proveedor = proveedor;
@@ -22,10 +23,10 @@ public void setDescripcion (String descripcion){
     this.descripcion = descripcion;
 }
 
-public int precio(){
+public double precio(){
     return this.precio;
 }
-public void precio (int precio){
+public void precio (double precio){
     this.precio = precio;
 }
 
@@ -36,14 +37,33 @@ public void proveedor(Proveedor proveedor){
     this.proveedor = proveedor;
 }
 
+public double porcentaje (){
+    return porcentaje;
+}
+public void porcentaje (double porcentaje){
+    this.porcentaje = porcentaje;
+}
+
 public String toString (){
     return  "[Producto ["+this.descripcion+"] ["+this.precio+"] ["+this.proveedor+"]]";
 }
 
 //metodos
 public boolean esCaro(){
-    if (getPrecio() < 1000) {
+    if (this.precio() < 1000) {
         return true;
     }
+    else {
+        return false;
+    }
+}
+
+public double calcularDescuento (double precio){
+    double descuento = porcentaje / 100;
+    return precio - porcentaje;
+}
+
+public String toString () {
+    return ""
 }
 }
