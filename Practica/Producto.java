@@ -6,14 +6,15 @@ public class Producto {
     private String descripcion;
     private double precio;
     private Proveedor proveedor;
-    private double porcentaje;
+    private double descuento;
 
 
 // constructor
-public Producto (String descripcion, double precio, Proveedor proveedor) {
+public Producto (String descripcion, double precio, double descuento, Proveedor proveedor) {
     this.descripcion = descripcion;
     this.precio = precio;
     this.proveedor = proveedor;
+    this.descuento = descuento;
 }
 //set y get
 public String getDescripcion (){
@@ -23,34 +24,34 @@ public void setDescripcion (String descripcion){
     this.descripcion = descripcion;
 }
 
-public double precio(){
+public double getPrecio(){
     return this.precio;
 }
-public void precio (double precio){
+public void setPrecio (double precio){
     this.precio = precio;
 }
 
-public Proveedor proveedor (){
+public Proveedor getProveedor (){
     return this.proveedor;
 }
-public void proveedor(Proveedor proveedor){
+public void setProveedor(Proveedor proveedor){
     this.proveedor = proveedor;
 }
 
-public double porcentaje (){
-    return porcentaje;
+public double getDescuento (){
+    return this.descuento;
 }
-public void porcentaje (double porcentaje){
-    this.porcentaje = porcentaje;
+public void setDescuento (double descuento){
+    this.descuento = descuento;
 }
 
 public String toString (){
-    return  "[Producto ["+this.descripcion+"] ["+this.precio+"] ["+this.proveedor+"]]";
+    return  "[Producto Descripcion: " +descripcion+ ", Precio: " + precio + ", Descuento: " + descuento + ", Proveedor: " + proveedor + "]";
 }
 
 //metodos
 public boolean esCaro(){
-    if (this.precio() < 1000) {
+    if (getPrecio() >= 5000) {
         return true;
     }
     else {
@@ -58,12 +59,21 @@ public boolean esCaro(){
     }
 }
 
-public double calcularDescuento (double precio){
-    double descuento = porcentaje / 100;
-    return precio - porcentaje;
+public boolean hayDescuento (){
+    if (getDescuento() > 0){
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
-public String toString () {
-    return ""
+public double calcularDescuento (){
+    double porcentaje = descuento / 100;
+    return precio - (precio * porcentaje);
+}
+
+public void actualizarPrecio (double precio){
+    setPrecio (precio);
 }
 }

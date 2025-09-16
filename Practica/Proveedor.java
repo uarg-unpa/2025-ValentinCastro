@@ -25,6 +25,6 @@ public class Proveedor {
     }
 
     public String toString (){
-        return "[["+this.nombre+"] ["+this.codigo+"]]";
+        return "[ Nombre: " + nombre + ", Codigo: " + codigo + "]";
     }
 }
