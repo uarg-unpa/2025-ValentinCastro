@@ -1,4 +1,4 @@
-package Practica;
+package Practica.Producto;
 
 public class Proveedor {
     private String nombre;

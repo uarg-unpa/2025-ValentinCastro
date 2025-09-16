@@ -1,4 +1,4 @@
-package Practica;
+package Practica.Vehiculo;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package Practica;
+package Practica.Producto;
 
 import java.util.Scanner;
 

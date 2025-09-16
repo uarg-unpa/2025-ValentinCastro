@@ -1,4 +1,4 @@
-package Practica;
+package Practica.Vehiculo;
 
 public class Motor {
     private int cilindrada;

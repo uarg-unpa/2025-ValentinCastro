@@ -1,4 +1,4 @@
-package Practica;
+package Practica.Vehiculo;
 
 public class Vehiculo {
     private String marca;

@@ -2,7 +2,7 @@
 
 
 
-package Practica;
+package Practica.Nave;
 
 public class Nave{
 

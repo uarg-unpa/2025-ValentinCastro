@@ -1,4 +1,4 @@
-package Practica;
+package Practica.Nave;
 
 import java.util.Scanner;
 

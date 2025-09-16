@@ -1,6 +1,6 @@
 //Diseña una clase Producto con atributos: descripcion, precio, y proveedor(objeto de clase Proveedor con nombre y codigo). Puedes agregar otros atributos si lo consideras necesario. Incluye constructor completo, metodo esCaro() (boolean, determina la condicion para que sea caro), un metodo calcularDescuento() (double, determina como calcularlo), y toString(). En main, lee datos con Scanner para al menos dos producto (pueden crear mas) e invoca los metodos para verificar si es caro, actualizar el precio y calcular el descuento.
 
-package Practica;
+package Practica.Producto;
 
 public class Producto {
     private String descripcion;
