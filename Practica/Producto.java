@@ -6,7 +6,7 @@ public class Producto {
     private String descripcion;
     private double precio;
     private Proveedor proveedor;
-    private double descuento;
+    private double descuento; //porcentaje
 
 
 // constructor
