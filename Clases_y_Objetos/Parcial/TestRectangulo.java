@@ -1,4 +1,4 @@
-package Parcial;
+package Clases_y_Objetos.Parcial;
 
 import java.util.Scanner;
 
