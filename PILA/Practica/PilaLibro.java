@@ -1,12 +1,13 @@
 package PILA.Practica;
 
-public class PilaEnteros {
-    private int[] elementos; // Array para almacenar los elementos
+public class PilaLibro {
+
+    private Libro[] elementos; // Array para almacenar los elementos
     private int cima;
     private final int MAX = 10; // Capacidad máxima de la pila
 
     // Constructor: inicializa el array y la cima
-    public PilaEnteros() {
+    public PilaLibro() {
         elementos = new int [MAX]; // Crear el array
         // Completar: inicializar cima
         cima = -1;
