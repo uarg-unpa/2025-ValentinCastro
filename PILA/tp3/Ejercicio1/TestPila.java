@@ -1,10 +1,10 @@
-package PILA.tp3.Ejercicio1.IncisoA;
+package PILA.tp3.Ejercicio1;
 
 public class TestPila {
     public static void main(String[] args) {
         
-        int X=3;
-        int Y=5;
+    int X=3;
+    int Y=5;
     int Z=2;
     Pila P=new Pila();
     P.meter(X);

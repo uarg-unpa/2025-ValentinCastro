@@ -1,4 +1,4 @@
-package PILA.tp3.Ejercicio1.IncisoA;
+package PILA.tp3.Ejercicio1;
 
 public class Pila {
 private int[] elementos; // Array para almacenar los elementos
