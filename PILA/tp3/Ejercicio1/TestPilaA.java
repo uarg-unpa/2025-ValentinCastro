@@ -1,6 +1,6 @@
 package PILA.tp3.Ejercicio1;
 
-public class TestPila {
+public class TestPilaA {
     public static void main(String[] args) {
         
     int X=3;
