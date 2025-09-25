@@ -1,4 +1,4 @@
-package PILA.tp3.Ejercicio2;
+package PILA.tp3.Ejercicio3y5;
 
 public class Pila {
     private char [] elementos;
@@ -9,12 +9,8 @@ public Pila() {
     elementos = new char[MAX];
     cima = -1;
 }
-public boolean estaVacia(){
-    if (cima <= 1){
-        return true;
-    }
-    return false;
-}
+public boolean estaVacia(){return cima == -1;}
+
 public boolean estaLlena (){
     if (cima >= MAX){
         return true;
@@ -27,9 +23,18 @@ public void meter(char elem){
     elementos [cima] = elem;
 }
 
-public int sacar(){
+public char sacar(){
     char aux = elementos [cima];
     cima --;
     return aux;
 }
+
+// Inciso nro5
+public char elementoCima(){
+    char X;
+    X = this.sacar();
+    this.meter(X);
+    return X;
+}
+
 }
