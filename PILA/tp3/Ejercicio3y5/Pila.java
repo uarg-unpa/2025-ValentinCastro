@@ -3,7 +3,7 @@ package PILA.tp3.Ejercicio3y5;
 public class Pila {
     private char [] elementos;
     private int cima;
-    private final int MAX = 5;
+    private final int MAX = 20;
 
 public Pila() {
     elementos = new char[MAX];
