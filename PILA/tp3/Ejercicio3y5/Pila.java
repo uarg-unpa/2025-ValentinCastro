@@ -3,19 +3,17 @@ package PILA.tp3.Ejercicio3y5;
 public class Pila {
     private char [] elementos;
     private int cima;
-    private final int MAX = 20;
+    private final int MAX;
 
-public Pila() {
+public Pila (int capacidad) {
+    MAX = capacidad;
     elementos = new char[MAX];
     cima = -1;
 }
 public boolean estaVacia(){return cima == -1;}
 
 public boolean estaLlena (){
-    if (cima >= MAX){
-        return true;
-    }
-    return false;
+    return cima == MAX -1;
 }
 
 public void meter(char elem){

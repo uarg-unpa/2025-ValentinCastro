@@ -6,24 +6,19 @@ public class TestPila {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Pedimos la palabra
-        System.out.print("Ingrese una palabra: ");
+        System.out.println("Ingresar palabra: ");
         String palabra = sc.nextLine();
+        Pila pila = new Pila(palabra.length());
 
-        // Creamos una pila del tamaño de la palabra
-        Pila pila = new Pila();
-
-        // Paso 1: apilamos cada carácter
-        for (int i = 0; i < palabra.length(); i++) {
+        for (int i = 0; i < palabra.length(); i++){
             pila.meter(palabra.charAt(i));
         }
 
-        // Paso 2: desapilamos para mostrar en orden inverso
-        System.out.print("Palabra invertida: ");
-        while (!pila.estaVacia()) {
-            System.out.print(pila.sacar());
+        String invertida = " ";
+        while (!pila.estaVacia()){
+            invertida += pila.sacar();
         }
-        System.out.println();
+        System.out.println("Palabra invertida: " + invertida);
 
         sc.close();
     }

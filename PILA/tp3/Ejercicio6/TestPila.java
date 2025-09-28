@@ -3,7 +3,6 @@ package PILA.tp3.Ejercicio6;
 public class TestPila {
     public static void main(String[] args) {
         Pila p = new Pila();
-        Pila aux = new Pila();
 
         int X;
 
@@ -40,17 +39,19 @@ public class TestPila {
         }
         else
             System.out.println("La pila esta llena.");
+        
+        System.out.println("Pila antes: " + p.toString());
 
-        //Ejercicio 6
-        while (!p.estaVacia()){
-            X = p.sacar();
-            if (!aux.estaLlena())
-                aux.meter (X);
+        //Ejercicio 6a
+        if (!p.estaVacia()){
+            int AUX = p.sacar();
+            if (!p.estaVacia()){
+                X = p.sacar();
+                System.out.println("El segundo elemento de la parte superior: " + X);
+            }
         }
-
-        System.out.println("P: " + p.toString());
-        System.out.println("AUX: " + aux.toString());
-
+        
+        System.out.println("Pila: " + p.toString());
 
     }
 }
