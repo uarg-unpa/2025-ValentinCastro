@@ -1,25 +1,23 @@
 package COLA;
 
-public class Cola {
+public class ColaInt {
     private int[] elementos;
-    private int frente, ultimo;
+    private int frente;
     private final int maxCola = 10;
     private int fin;
 
-    public Cola(){
+    public ColaInt(){
         elementos = new int [maxCola];
         frente = 0;
-        ultimo = 0;
         fin = 0;
     }
 
     public boolean estaVacia(){
-        return frente = 0;
+        return frente == fin;
     }
 
     public boolean estaLlena(){
-        int sigultimo = siguiente (fin);
-        return (sigultimo == frente);
+        return fin == maxCola;
     }
 
     public void insertar(int elem){
@@ -40,8 +38,7 @@ public class Cola {
 
     }
 
-    public void peek (){
-        return elementos[frente];
+    public int peek (){
+        return elementos [frente];
     }
-
 }
