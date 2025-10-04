@@ -1,4 +1,4 @@
-package tp2.Ejercicio2;
+package Clases_y_Objetos.tp2.Ejercicio2;
 
 public class TestRectangulo {
     public static void main(String[] args) {

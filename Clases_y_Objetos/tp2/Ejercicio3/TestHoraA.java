@@ -1,4 +1,4 @@
-package tp2.Ejercicio3;
+package Clases_y_Objetos.tp2.Ejercicio3;
 
 public class TestHoraA {
     public static void main(String[] args) {

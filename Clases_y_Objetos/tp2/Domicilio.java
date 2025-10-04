@@ -1,4 +1,4 @@
-package tp2;
+package Clases_y_Objetos.tp2;
 
 public class Domicilio {
 private String calle;
