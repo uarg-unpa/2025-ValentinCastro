@@ -1,12 +1,12 @@
 package COLA.practica;
 
-public class colaCaracteres {
+public class ColaCaracteres {
         private char[] elementos;
     private int frente;
     private final int maxCola = 10;
     private int fin;
 
-    public colaCaracteres(){
+    public ColaCaracteres(){
         elementos = new char [maxCola];
         frente = 0;
         fin = 0;
@@ -38,6 +38,21 @@ public class colaCaracteres {
 
     }
 
+    public int tamaño() {
+    return fin + 1;
+    }
+
+    public void mostrarCola() {
+        if (estaVacia()) {
+            System.out.println("[Cola vacía]");
+        } else {
+            System.out.print("Cola actual: ");
+            for (int i = 0; i <= fin; i++) {
+                System.out.print(elementos[i] + " ");
+            }
+            System.out.println();
+        }
+    }
 
     public char peek (){
         return elementos [0];

@@ -2,11 +2,11 @@ package COLA.practica;
 
 import java.util.Scanner;
 
-public class testColaChar {
+public class TestColaChar {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ColaCaracteres cola = new ColaCaracteres (10);
+        ColaCaracteres cola = new ColaCaracteres ();
 
         char opcion;
         do {
@@ -26,7 +26,7 @@ public class testColaChar {
                     } else {
                         System.out.print("Ingrese un comando (carácter): ");
                         char comando = sc.next().charAt(0);
-                        cola.encolar(comando);
+                        cola.insertar(opcion);
                         cola.mostrarCola();
                     }
                     break;
@@ -35,7 +35,7 @@ public class testColaChar {
                     if (cola.estaVacia()) {
                         System.out.println("No hay comandos para desencolar.");
                     } else {
-                        char desencolado = cola.desencolar();
+                        char desencolado = cola.borrar();
                         System.out.println("Desencolado: " + desencolado);
                         cola.mostrarCola();
                     }
@@ -55,7 +55,7 @@ public class testColaChar {
                     } else if (cola.estaLlena()) {
                         System.out.println("Estado: Cola llena.");
                     } else {
-                        System.out.println("Estado: Cola con " + (cola.fin + 1) + " comandos.");
+                        System.out.println("Estado: Cola con " + (cola.tamaño()) + " comandos.");
                     }
                     cola.mostrarCola();
                     break;
