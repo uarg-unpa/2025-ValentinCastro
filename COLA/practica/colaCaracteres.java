@@ -38,7 +38,8 @@ public class colaCaracteres {
 
     }
 
+
     public char peek (){
-        return elementos [frente];
+        return elementos [0];
     }
 }
