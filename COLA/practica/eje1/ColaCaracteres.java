@@ -1,4 +1,4 @@
-package COLA.practica;
+package COLA.practica.eje1;
 
 public class ColaCaracteres {
         private char[] elementos;
@@ -39,7 +39,7 @@ public class ColaCaracteres {
     }
 
     public int tamaño() {
-    return fin + 1;
+    return fin - frente;
     }
 
     public void mostrarCola() {
@@ -47,7 +47,7 @@ public class ColaCaracteres {
             System.out.println("[Cola vacía]");
         } else {
             System.out.print("Cola actual: ");
-            for (int i = 0; i <= fin; i++) {
+            for (int i = 0; i < fin; i++) {
                 System.out.print(elementos[i] + " ");
             }
             System.out.println();

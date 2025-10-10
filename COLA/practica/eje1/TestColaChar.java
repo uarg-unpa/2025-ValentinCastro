@@ -1,4 +1,4 @@
-package COLA.practica;
+package COLA.practica.eje1;
 
 import java.util.Scanner;
 
@@ -26,7 +26,7 @@ public class TestColaChar {
                     } else {
                         System.out.print("Ingrese un comando (carácter): ");
                         char comando = sc.next().charAt(0);
-                        cola.insertar(opcion);
+                        cola.insertar(comando);
                         cola.mostrarCola();
                     }
                     break;
