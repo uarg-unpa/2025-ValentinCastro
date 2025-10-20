@@ -24,7 +24,6 @@ public class ColaString {
         return cantidad == maxCola;
     }
 
-    // Encolar (insertar un nuevo nombre al final)
     public void encolar(String nombre) {
         if (estaLlena()) {
             System.out.println("La cola está llena.");
@@ -35,7 +34,6 @@ public class ColaString {
         cantidad++;
     }
 
-    // Desencolar (eliminar el más antiguo)
     public String desencolar() {
         if (estaVacia()) {
             System.out.println("La cola está vacía.");

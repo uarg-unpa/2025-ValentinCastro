@@ -4,12 +4,14 @@ public class PilaEnteros {
     private int[] elementos; // Array para almacenar los elementos
     private int cima;
     private final int MAX = 10; // Capacidad máxima de la pila
+    private int contador;
 
     // Constructor: inicializa el array y la cima
     public PilaEnteros() {
         elementos = new int [MAX]; // Crear el array
         // Completar: inicializar cima
         cima = -1;
+        contador = 0;
     }
 
     // Verifica si la pila está vacía
@@ -43,5 +45,21 @@ public class PilaEnteros {
         int aux = elementos [cima];
         cima--;
         return aux;
+        }
+    
+    public int cantOcurrencia(int elemento){
+        PilaEnteros aux = new PilaEnteros();
+        while (!estaVacia()){
+            int elementos = sacar();
+            if (elementos == elemento){
+                contador++;
+                aux.meter(elementos);
+            }
+        }
+          //Restaurar
+        while (!aux.estaVacia()) {
+            meter(aux.sacar());
+        }
+        return contador;
         }
 }
