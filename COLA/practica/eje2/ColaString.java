@@ -25,10 +25,6 @@ public class ColaString {
     }
 
     public void encolar(String nombre) {
-        if (estaLlena()) {
-            System.out.println("La cola está llena.");
-            return;
-        }
         fin = (fin + 1) % maxCola;
         elementos[fin] = nombre;
         cantidad++;
