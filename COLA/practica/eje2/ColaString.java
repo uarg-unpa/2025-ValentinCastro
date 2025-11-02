@@ -31,10 +31,6 @@ public class ColaString {
     }
 
     public String desencolar() {
-        if (estaVacia()) {
-            System.out.println("La cola está vacía.");
-            return null;
-        }
         String aux = elementos[frente];
         frente = (frente + 1) % maxCola;
         cantidad--;
