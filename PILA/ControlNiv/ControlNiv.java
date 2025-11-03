@@ -6,12 +6,10 @@ public class ControlNiv {
     private int[] elementos;
     private int cima;
     private final int MAX = 5;
-    private int contador;
 
     public ControlNiv() {
         elementos = new int[MAX];
         cima = -1;
-        contador = 0;
     }
 
     public boolean estaVacia(){
@@ -43,14 +41,17 @@ public class ControlNiv {
         return elementos[cima];
     }
 
-    public int cantOcurrencia(int elemento){
+    public int cantOcurrencia(int elem){
     PilaEnteros aux = new PilaEnteros();
+    int contador = 0;
     while (!estaVacia()){
         int elementos = sacar();
-        if (elementos == elemento){
+        if (elementos == elem){
             contador++;
-            aux.meter(elementos);
         }
+
+        aux.meter(elementos);
+        
     }
       //Restaurar
     while (!aux.estaVacia()) {
