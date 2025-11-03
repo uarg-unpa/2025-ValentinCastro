@@ -49,9 +49,9 @@ public class ControlNiv {
         if (elementos == elem){
             contador++;
         }
-
+        //CORRECCION
         aux.meter(elementos);
-        
+
     }
       //Restaurar
     while (!aux.estaVacia()) {
