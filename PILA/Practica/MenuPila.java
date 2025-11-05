@@ -12,8 +12,8 @@ public class MenuPila {
             System.out.println("\n=== MENÚ DE PILA ===");
             System.out.println("1. Meter elemento");
             System.out.println("2. Sacar elemento");
-            System.out.println("4. Verificar estado (vacía/llena)");
-            System.out.println("5. Contar cantidad de ocurrencias");
+            System.out.println("3. Verificar estado (vacía/llena)");
+            System.out.println("4. Contar cantidad de ocurrencias");
             System.out.println("0. Salir");
             System.out.print("Opción: ");
             opcion = sc.nextInt();
@@ -39,11 +39,11 @@ public class MenuPila {
                     }
                     break;
 
-                case 4: // Verificar estado
+                case 3: // Verificar estado
                     System.out.println("¿Vacía? " + pila.estaVacia() + " | ¿Llena? " + pila.estaLlena());
                     break;
 
-                case 5:
+                case 4:
                     System.out.println("Ingrese un elemento: ");
                     int elem = sc.nextInt();
                     System.out.println("El elemento " + elem + " se repite: " + pila.cantOcurrencia(elem) + " veces.");
