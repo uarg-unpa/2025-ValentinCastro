@@ -1,12 +1,12 @@
 package PILA.MusicPlayer;
 
 public class PlayList {
-    private String[] elementos;
+    private Song[] elementos;
     private int cima;
     private final int MAX = 5;
 
     public PlayList(){
-        elementos = new String [MAX];
+        elementos = new Song [MAX];
         cima = -1;
     }
 
@@ -24,18 +24,18 @@ public class PlayList {
         return false;
     }
 
-    public void meter(String elem){
+    public void meter(Song elem){
         cima++;
         elementos[cima] = elem;
     }
 
-    public String sacar (){
-        String aux = elementos [cima];
+    public Song sacar (){
+        Song aux = elementos [cima];
         cima --;
         return aux;
     }
 
-    public String peek (){
+    public Song peek (){
         return elementos[cima];
     }
 }

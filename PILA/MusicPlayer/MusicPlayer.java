@@ -23,6 +23,7 @@ public class MusicPlayer {
                     if (music.estaLlena()){
                         System.out.println("Error: La playlist esta llena");
                     }else {
+                        sc.nextLine();
                         System.out.println("Ingrese el nombre de la cancion: ");
                         String nombre = sc.nextLine();
                         System.out.println("Ingrese nombre del interprete: ");
@@ -32,7 +33,8 @@ public class MusicPlayer {
                         System.out.println("Ingrese año de lanzamiento: ");
                         int año = sc.nextInt();
                         Song tema = new Song(nombre, interprete, genero, año);
-                        System.out.println("Cancion agregada: " + tema.toString());
+                        music.meter(tema);
+                        System.out.println("La cancion: " + tema.toString() + " ha sido agregada correctamente.");
                     }
                     break;
 
@@ -40,14 +42,30 @@ public class MusicPlayer {
                     if (music.estaVacia()){
                         System.out.println("Error: La playlist esta vacia.");
                     }else{
-                        String elemento = music.sacar();
-                        System.out.println("Cancion eliminada: " + elemento);
+                        Song elemento = music.sacar();
+                        System.out.println("La cancion: " + elemento + " se ha eliminado correctamente.");
                     }
                     break;
 
                 case 3:
-                
-
+                    if (music.estaVacia()){
+                        System.out.println("La playlist esta vacia");
+                    }else{
+                        System.out.println("\n. . . REPRODUCIENDO PLAYLIST . . .\n");
+                        PlayList aux = new PlayList();
+                        int contador = 0;
+                        
+                        while (!music.estaVacia()) {
+                            Song tema = music.sacar();
+                            contador ++;
+                            System.out.println(contador + "_ " + tema);
+                            aux.meter(tema);
+                        }
+                        while (!aux.estaVacia()) {
+                            music.meter(aux.sacar());
+                        }
+                    }
+                    break;
                 default:
                     System.out.println("Opcion invalida...");
             }
