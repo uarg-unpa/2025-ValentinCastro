@@ -61,4 +61,28 @@ public class ColaInt {
         return contador;
 
 }
+public double promedio() {
+    if (estaVacia()) {
+        return 0;
+    }
+
+    ColaInt aux = new ColaInt();
+    double suma = 0;
+    int contador = 0;
+
+    // Sacamos todos los elementos, los sumamos y guardamos en la auxiliar
+    while (!estaVacia()) {
+        int elem = desencolar();
+        suma += elem;
+        contador++;
+        aux.encolar(elem);
+    }
+
+    // Devolvemos los elementos a la cola original
+    while (!aux.estaVacia()) {
+        encolar(aux.desencolar());
+    }
+
+    return suma / contador;
+}
 }
