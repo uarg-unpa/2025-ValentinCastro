@@ -49,7 +49,6 @@ public class ControlNiv {
         if (elementos == elem){
             contador++;
         }
-        //CORRECCION
         aux.meter(elementos);
 
     }

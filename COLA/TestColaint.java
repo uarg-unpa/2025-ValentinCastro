@@ -13,6 +13,8 @@ public class TestColaint {
     System.out.println("2. Desencolar tarea (sacar número)");
     System.out.println("3. Ver tarea en frente (peek)");
     System.out.println("4. Mostrar estado (vacía, llena o cantidad)");
+    System.out.println("5. Mostrar cuantos elementos hay");
+    System.out.println("6. Eliminar elementos repetidos");
     System.out.println("0. Salir");
     System.out.print("Opción: ");
     opcion = sc.nextInt();
@@ -23,7 +25,7 @@ public class TestColaint {
         if (cola.estaLlena()){
             System.out.println("Error: La cola está llena (máximo 10 tareas). No se puede encolar " + tarea);
         } else {
-            cola.insertar(tarea);
+            cola.encolar(tarea);
         System.out.println("Tarea " + tarea + " encolada con éxito.");
         }
     break;
@@ -31,7 +33,7 @@ public class TestColaint {
         if (cola.estaVacia()) {
             System.out.println("Error: La cola está vacía. No se puede desencolar.");
         } else {
-            int desencolada = cola.borrar();
+            int desencolada = cola.desencolar();
             System.out.println("Tarea desencolada: " + desencolada);
         }
     break;
@@ -52,6 +54,23 @@ public class TestColaint {
         }
         else {
         System.out.println("Estado: La cola tiene " + 1 + " tarea(s).");//no implementado aun no hacerlo
+        }
+        break;
+    case 5:
+        if (cola.estaVacia()){
+            System.out.println("Estado: La cola esta vacia");
+        }else{
+            int contar = cola.contar();
+            System.out.println("Cantidad de elementos: " + contar);
+        }
+    break;
+    case 6:
+        if (cola.estaVacia()){
+            System.out.println("Estado: esta vacia");
+        }else {
+            System.out.println("Ingrese elemento repetido: ");
+            int repetido = sc.nextInt();
+            System.out.println("El elemento se ha eliminado " + cola.borrarRepetidos(repetido) + " veces");
         }
     break;
     case 0:

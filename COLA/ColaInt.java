@@ -17,22 +17,19 @@ public class ColaInt {
     }
 
     public boolean estaLlena(){
-        return fin == maxCola;
+        return (fin + 1) % maxCola == frente;
     }
 
-    public void insertar(int elem){
+    public void encolar(int elem){
         elementos [fin] = elem;
 
-        fin++;
-    }
+        fin = (fin + 1)%maxCola;
+        }
 
-    public int borrar(){
+    public int desencolar(){
         int aux = elementos[frente];
 
-        for (int i = 0; i <  fin - 1; i++){
-            elementos[i] = elementos [i+1];
-        }
-        fin--;
+        frente = (frente + 1) % maxCola;
 
         return aux;
 
@@ -41,4 +38,27 @@ public class ColaInt {
     public int peek (){
         return elementos [frente];
     }
+
+    public int contar (){
+        return (fin - frente + 1);
+    }
+
+    public int borrarRepetidos (int elem){
+        ColaInt aux = new ColaInt();
+        int contador = 0;
+
+        while (!estaVacia()){
+            int x = desencolar ();
+            if (x == elem){
+                contador ++;
+            }else {
+                aux.encolar(x);
+            }
+        }
+        while (!aux.estaVacia()) {
+            encolar(aux.desencolar());
+        }
+        return contador;
+
+}
 }

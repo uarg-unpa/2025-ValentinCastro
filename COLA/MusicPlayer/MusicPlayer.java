@@ -1,4 +1,4 @@
-package PILA.MusicPlayer;
+package COLA.MusicPlayer;
 
 import java.util.Scanner;
 

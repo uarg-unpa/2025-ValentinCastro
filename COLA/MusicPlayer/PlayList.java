@@ -1,4 +1,4 @@
-package PILA.MusicPlayer;
+package COLA.MusicPlayer;
 
 public class PlayList {
     private Song[] elementos;
