@@ -20,13 +20,13 @@ public class ColaCaracteres {
         return fin == maxCola;
     }
 
-    public void insertar(char elem){
+    public void encolar(char elem){
         elementos [fin] = elem;
 
         fin++;
     }
 
-    public char borrar(){
+    public char desencolar(){
         char aux = elementos[frente];
 
         for (int i = 0; i <  fin - 1; i++){
