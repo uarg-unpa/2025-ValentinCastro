@@ -33,7 +33,7 @@ public class MusicPlayer {
                         System.out.println("Ingrese año de lanzamiento: ");
                         int año = sc.nextInt();
                         Song tema = new Song(nombre, interprete, genero, año);
-                        music.meter(tema);
+                        music.encolar(tema);
                         System.out.println("La cancion: " + tema.toString() + " ha sido agregada correctamente.");
                     }
                     break;
@@ -42,7 +42,7 @@ public class MusicPlayer {
                     if (music.estaVacia()){
                         System.out.println("Error: La playlist esta vacia.");
                     }else{
-                        Song elemento = music.sacar();
+                        Song elemento = music.desencolar();
                         System.out.println("La cancion: " + elemento + " se ha eliminado correctamente.");
                     }
                     break;
@@ -56,13 +56,13 @@ public class MusicPlayer {
                         int contador = 0;
                         
                         while (!music.estaVacia()) {
-                            Song tema = music.sacar();
+                            Song tema = music.desencolar();
                             contador ++;
-                            System.out.println(contador + "_ " + tema);
-                            aux.meter(tema);
+                            System.out.println(contador + " _ " + tema);
+                            aux.encolar(tema);
                         }
                         while (!aux.estaVacia()) {
-                            music.meter(aux.sacar());
+                            music.encolar(aux.desencolar());
                         }
                     }
                     break;

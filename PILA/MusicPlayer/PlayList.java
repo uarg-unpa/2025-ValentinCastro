@@ -2,41 +2,33 @@ package PILA.MusicPlayer;
 
 public class PlayList {
     private Song[] elementos;
-    private int cima;
+    private int frente;
+    private int fin;
     private final int MAX = 5;
 
     public PlayList(){
         elementos = new Song [MAX];
-        cima = -1;
+        frente = 0;
+        fin = 0;
     }
 
         public boolean estaVacia(){
-        if (cima <= -1){
-            return true;
-        }
-        return false;
+        return frente == fin;
     }
 
     public boolean estaLlena(){
-        if (cima >= MAX){
-            return true;
-        }
-        return false;
+        return (fin +1) % MAX == frente;
     }
 
-    public void meter(Song elem){
-        cima++;
-        elementos[cima] = elem;
+    public void encolar(Song tema){
+        elementos[fin] = tema;
+        fin = (fin + 1) % MAX;
     }
 
-    public Song sacar (){
-        Song aux = elementos [cima];
-        cima --;
+    public Song desencolar (){
+        Song aux = elementos [frente];
+        frente = (frente + 1) % MAX;
         return aux;
-    }
-
-    public Song peek (){
-        return elementos[cima];
     }
 }
 

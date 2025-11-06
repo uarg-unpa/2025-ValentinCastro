@@ -41,6 +41,6 @@ public class Song {
     }
     @Override
     public String toString() {
-        return "["+"Nombre: "+this.nombre+"] ["+"Interprete: "+this.interprete+"] ["+"Genero: "+this.genero+"] ["+"Año: "+this.año+"]";
+        return  this.nombre+" - ["+"Interprete: "+this.interprete+"] ["+"Genero: "+this.genero+"] ["+"Año: "+this.año+"]";
     }
 }
