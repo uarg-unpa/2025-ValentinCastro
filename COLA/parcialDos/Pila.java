@@ -47,11 +47,18 @@ public class Pila {
             }
         aux1.meter(elem);
         }
+        while (!aux1.estaVacia()){
+            meter(aux1.sacar());
+        }
         while (!p2.estaVacia()){
             int elem = sacar();
             if (elem % 2 ==0){
                 cont2++;
             }
+        aux2.meter(elem);
+        }
+        while (!aux2.estaVacia()){
+            p2.meter(aux2.sacar());
         }
         if (cont1 > cont2){
             return true;

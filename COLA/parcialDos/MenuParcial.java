@@ -23,15 +23,13 @@ public class MenuParcial {
                 case 1:
                     Pila2 aux1 = new Pila2();
                     Pila2 aux2 = new Pila2();
-                    while (!p1.estaVacia()){
-                        char elem = p1.sacar();
-                        aux1.meter(elem);
-                        q1.encolar(elem);
-                    }
-                    while (!p2.estaVacia()) {
-                        char elem = p2.sacar();
-                        aux2.meter(elem);
-                        q1.encolar(elem);
+                    while (!p1.estaVacia() && !p2.estaVacia()){
+                        char elem1 = p1.sacar();
+                        aux1.meter(elem1);
+                        q1.encolar(elem1);
+                        char elem2 = p2.sacar();
+                        aux2.meter(elem2);
+                        q1.encolar(elem2);
                     }
                     while (!aux1.estaVacia()) {
                         p1.meter(aux1.sacar());
