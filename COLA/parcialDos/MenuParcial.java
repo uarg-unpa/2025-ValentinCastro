@@ -25,10 +25,10 @@ public class MenuParcial {
                     Pila2 aux2 = new Pila2();
                     while (!p1.estaVacia() && !p2.estaVacia()){
                         char elem1 = p1.sacar();
-                        aux1.meter(elem1);
-                        q1.encolar(elem1);
                         char elem2 = p2.sacar();
+                        aux1.meter(elem1);
                         aux2.meter(elem2);
+                        q1.encolar(elem1);
                         q1.encolar(elem2);
                     }
                     while (!aux1.estaVacia()) {
