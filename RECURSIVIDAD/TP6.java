@@ -54,10 +54,18 @@ public static int vocales (String cd){
 //El metodo en si no hace nada mas que imprimir un mensaje si N es igual a 0, y sino devuelve el entero N como está.
 public void queHago(int n) { //no es static, ni retorna nada, tendria que ser "public static int queHago(int n)"
     if (n == 0) {
-        System.out.println("ERROR: No hay valor agregado");
+        System.out.println("ERROR: No hay valor agregado"); //caso base
     } else {
         System.out.println(n); //solo imprime el entero
-        queHago(n); //no hay caso base solo un caso general pero no hace nada.
+        queHago(n); //no hay  caso general, solo esta llamando al mismo metodo.
     }
+}
+
+//Ejercicio 8
+public static int calcularSuma (int n){
+    if (n == 0)
+        return 0;
+    else
+        return n + calcularSuma(n - 1);
 }
 }
