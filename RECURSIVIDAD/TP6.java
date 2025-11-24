@@ -48,4 +48,16 @@ public static int vocales (String cd){
     suma = 1;
         return suma + vocales(cd.substring(1));
 }
+
+//Practica de discord
+
+//El metodo en si no hace nada mas que imprimir un mensaje si N es igual a 0, y sino devuelve el entero N como está.
+public void queHago(int n) { //no es static, ni retorna nada, tendria que ser "public static int queHago(int n)"
+    if (n == 0) {
+        System.out.println("ERROR: No hay valor agregado");
+    } else {
+        System.out.println(n); //solo imprime el entero
+        queHago(n); //no hay caso base solo un caso general pero no hace nada.
+    }
+}
 }
