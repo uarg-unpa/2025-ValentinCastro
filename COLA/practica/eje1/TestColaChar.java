@@ -26,7 +26,7 @@ public class TestColaChar {
                     } else {
                         System.out.print("Ingrese un comando (carácter): ");
                         char comando = sc.next().charAt(0);
-                        cola.insertar(comando);
+                        cola.encolar(comando);
                         cola.mostrarCola();
                     }
                     break;
@@ -35,7 +35,7 @@ public class TestColaChar {
                     if (cola.estaVacia()) {
                         System.out.println("No hay comandos para desencolar.");
                     } else {
-                        char desencolado = cola.borrar();
+                        char desencolado = cola.desencolar();
                         System.out.println("Desencolado: " + desencolado);
                         cola.mostrarCola();
                     }

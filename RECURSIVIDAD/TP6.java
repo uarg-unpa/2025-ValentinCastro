@@ -3,10 +3,10 @@ public class TP6 {
 public static void main (String[] args){
     int resultado = suma (5);
     int resultado2 = sumaPares(5);
-    int resultado3 = funcionG(100, 10);
+    int resultado3 = sumaDigitos(1234);
     System.out.println(resultado);
     System.out.println(resultado2);
-    System.out.println(resultado3);
+    System.out.println( "Es:" + resultado3);
 }
 //Ejercicio 4
 public static int suma(int n){
@@ -18,35 +18,33 @@ public static int suma(int n){
 
 //Ejercicio 5
 public static int sumaPares(int n){
-    if (n == 2)
-        return 2;
-    if (n < 2)
+    if (n <= 0)
         return 0;
-    else if (n % 2 != 0){
-            return sumaPares(n - 1);
+    else if (n % 2 == 0){
+            return n + sumaPares(n - 1);
     }
         else
-            return n + sumaPares(n - 2);
+            return sumaPares(n - 1);
 
 }
 
 //Ejercicio 6
 public static int funcionG (int x, int y){
-    if (x < y)
+    if (x <= y)
         return 1;
     else
-        return funcionG(x, y + 1) + 1;
+        return 1 + funcionG(x, y + 1);
 }
 
 //Ejercicio 7
 public static int vocales (String cd){
     if (cd.length() == 0)
         return 0;
-    char voc = Character.toLowerCase(cd.charAt(0));
-    int suma = 0;
-    if (voc == 'a' || voc == 'e' || voc == 'i' || voc == 'o' || voc == 'u');
-    suma = 1;
-        return suma + vocales(cd.substring(1));
+    else
+        if (cd.charAt(0) == 'a' || cd.charAt(0) == 'e' || cd.charAt(0) == 'i' || cd.charAt(0) == 'o' || cd.charAt(0) == 'u')
+            return 1 + vocales(cd.substring(1));
+        else
+            return vocales (cd.substring(1));
 }
 
 //Practica de discord
@@ -63,9 +61,75 @@ public void queHago(int n) { //no es static, ni retorna nada, tendria que ser "p
 
 //Ejercicio 8
 public static int calcularSuma (int n){
-    if (n == 0)
-        return 0;
+    if (n == 1)
+        return 1;
     else
         return n + calcularSuma(n - 1);
+}
+
+//Ejercicio 9
+public static boolean determinarNum (int n, int [] num, int indice){
+    if (indice == num.length)
+        return false;
+    else
+        if (num [indice] == n)
+            return true;
+        else
+            return determinarNum(n, num, indice + 1);
+}
+
+//Ejercicio practica 25/11
+public static int cantOcurrencias (int n, int [] num, int indice){
+    if (indice == num.length)
+        return 0;
+    else
+        if (num [indice] == n)
+            return 1 + cantOcurrencias(n, num, indice + 1);
+        else
+            return cantOcurrencias(n, num, indice + 1);
+}
+
+//Ejercicio 10
+public static int valorMinimo (int [] arr, int indice){
+    int minResto = valorMinimo(arr, indice + 1);
+    if (indice == arr.length - 1)
+        return arr[indice];
+    else
+        if (arr [indice] < minResto)
+            return arr[indice];
+        else
+            return minResto;
+}
+
+public static int misterio (int a, int b){
+    if (a == 0)
+        return b;
+    else
+        return misterio(a-1, b+1);
+}
+
+//Practica contar cuantas veces aparece 'A' o 'a'
+public static int contarA (String s){
+    if (s.charAt(0) == 0)
+        return 0;
+    else
+        if(s.charAt(0) == 'a' || s.charAt(0) == 'A')
+            return 1 + contarA(s.substring(1));
+        else
+            return contarA(s.substring(1));
+}
+// traza rapida eje4
+public static int f (int n){
+    if (n < 1)
+        return 1;
+    return n * f(n - 1);
+}
+
+//La suma de digitos de un entero eje3
+public static int sumaDigitos(int n){
+    if (n < 10)
+        return n;
+    else
+        return (n % 10) + sumaDigitos(n / 10);
 }
 }
