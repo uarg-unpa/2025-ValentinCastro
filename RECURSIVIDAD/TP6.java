@@ -132,4 +132,12 @@ public static int sumaDigitos(int n){
     else
         return (n % 10) + sumaDigitos(n / 10);
 }
+
+//suma de elmentos de un arreglo
+public static int sumaArr (int n, int arr[], int indice){
+    if (indice == arr.length)
+        return 1;
+    else
+        return arr [indice] + sumaArr(n, arr, indice + 1);
+}
 }
