@@ -2,8 +2,8 @@ package RECURSIVIDAD;
 public class TP6 {
 public static void main (String[] args){
     int resultado = suma (5);
-    int resultado2 = sumaPares(5);
-    int resultado3 = sumaDigitos(1234);
+    int resultado2 = sumaPares(8);
+    int resultado3 = multiplosDeTres(15);
     System.out.println(resultado);
     System.out.println(resultado2);
     System.out.println( "Es:" + resultado3);
@@ -89,16 +89,17 @@ public static int cantOcurrencias (int n, int [] num, int indice){
             return cantOcurrencias(n, num, indice + 1);
 }
 
-//Ejercicio 10
+//Ejercicio 10 (tambien sirve para el valor maximo)
 public static int valorMinimo (int [] arr, int indice){
-    int minResto = valorMinimo(arr, indice + 1);
     if (indice == arr.length - 1)
         return arr[indice];
+
+    int minResto = valorMinimo(arr, indice + 1);
+
+    if (arr [indice] < minResto)
+        return arr[indice];
     else
-        if (arr [indice] < minResto)
-            return arr[indice];
-        else
-            return minResto;
+        return minResto;
 }
 
 public static int misterio (int a, int b){
@@ -134,10 +135,40 @@ public static int sumaDigitos(int n){
 }
 
 //suma de elmentos de un arreglo
-public static int sumaArr (int n, int arr[], int indice){
+public static int sumaArr (int arr[], int indice){
     if (indice == arr.length)
+        return 0;
+    else
+        return arr [indice] + sumaArr(arr, indice + 1);
+}
+
+//Cantidad de numeros negaritvos en un array
+public static int contarNegativos (int arr[], int indice){
+    if (indice == arr.length)
+        return 0;
+    else
+        if (arr[indice] < 0)
+            return 1 + contarNegativos(arr, indice + 1);
+        else
+            return contarNegativos(arr, indice + 1);
+}
+
+//Calcular la potencia de a y b
+public static int potencia (int a, int b){
+    if (b == 0)
         return 1;
     else
-        return arr [indice] + sumaArr(n, arr, indice + 1);
+        return a * potencia(a, b - 1);
+}
+
+//Calcular la suma de los primeros numeros multiplos de 3
+public static int multiplosDeTres(int n){
+    if (n == 0)
+        return 0;
+    else
+        if (n % 3 == 0)
+            return n + multiplosDeTres(n - 1);
+        else
+            return multiplosDeTres(n - 1);
 }
 }
