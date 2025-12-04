@@ -1,12 +1,15 @@
 package RECURSIVIDAD;
+
 public class TP6 {
 public static void main (String[] args){
     int resultado = suma (5);
     int resultado2 = sumaPares(8);
     int resultado3 = multiplosDeTres(15);
+    String resultado4 = cadena("hola");
     System.out.println(resultado);
     System.out.println(resultado2);
     System.out.println( "Es:" + resultado3);
+    System.out.println(resultado4);
 }
 //Ejercicio 4
 public static int suma(int n){
@@ -170,5 +173,24 @@ public static int multiplosDeTres(int n){
             return n + multiplosDeTres(n - 1);
         else
             return multiplosDeTres(n - 1);
+}
+
+//Ejercicio 1
+public static int producto (int arr [], int indice){
+    if (indice == arr.length)
+        return 1;
+    else
+        if (arr[indice] % 2 == 0)
+            return arr[indice] * producto(arr, indice + 1);
+        else
+            return producto(arr, indice + 1);
+}
+
+//Ejercicio 2
+public static String cadena (String cd){
+    if (cd.length() <= 1)
+        return cd;
+    else
+        return cadena(cd.substring(1)) + cd.charAt(0);
 }
 }
